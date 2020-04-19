@@ -1,0 +1,56 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: lightgrey;
+    /*background: url(/content/Images/EventInfinityHome.jpg) no-repeat;*/
+    background-color: #cccccc;
+    /*background: url(/content/Images/EventInfinityHome.jpg) no-repeat;*/
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    /*background-color: lightgray;*/
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.img-home{
+    /*width: 300px;*/
+    width: 1074px;
+    height: 372px;
+    background-image: url(Images/EventInfinityHome.jpg);
+}
+
+.button {
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 1em;
+    text-align: center;
+    border-radius: 3px;
+    padding: 8px 8px;
+    border-color: white;
+    background-color: white;
+    color: black;
+    transition-duration: 200ms;
+    border: hidden;
+}
+
+.button:hover {
+    background-color: gray;
+    color: black;
+}
