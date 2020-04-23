@@ -11,6 +11,8 @@ namespace Event_Infinity.Models
     public class EventType
     {
         public virtual int EventTypeId { get; set; }
+        [Required]
+        [Display(Name = "Event Type Name")]
         public virtual string Description { get; set; }
 
     }

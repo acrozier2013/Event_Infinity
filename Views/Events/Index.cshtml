@@ -18,17 +18,20 @@
             @Html.DisplayNameFor(model => model.EventTitle)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.EventDescription)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.EventStartDate)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.EventEndDate)
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.EventStartTime)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.EventEndTime)
-        </th>
+        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.EventLocation)
         </th>
@@ -48,46 +51,49 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.EventType.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EventTitle)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EventStartDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EventEndDate)
-        </td>
-        <td>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.EventType.Description)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.EventTitle)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.EventDescription)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.EventStartDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.EventEndDate)
+    </td>
+    @*<td>
             @Html.DisplayFor(modelItem => item.EventStartTime)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.EventEndTime)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EventLocation)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.OrganizerName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.OrganizerContactInfo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MaxTickets)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AvailableTickets)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.EventId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.EventId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.EventId })
-        </td>
-    </tr>
+        </td>*@
+    <td>
+        @Html.DisplayFor(modelItem => item.EventLocation)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.OrganizerName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.OrganizerContactInfo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.MaxTickets)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.AvailableTickets)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.EventId }) |
+        @Html.ActionLink("Details", "Details", new { id = item.EventId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.EventId })
+    </td>
+</tr>
 }
 
 </table>

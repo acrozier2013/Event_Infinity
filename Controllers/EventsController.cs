@@ -49,7 +49,7 @@ namespace Event_Infinity.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "EventId,EventTypeId,EventTitle,EventStartDate,EventEndDate,EventStartTime,EventEndTime,EventLocation,OrganizerName,OrganizerContactInfo,MaxTickets,AvailableTickets")] Event @event)
+        public ActionResult Create([Bind(Include = "EventId,EventTypeId,EventTitle,EventDescription,EventStartDate,EventEndDate,EventLocation,OrganizerName,OrganizerContactInfo,MaxTickets,AvailableTickets")] Event @event)
         {
             if (ModelState.IsValid)
             {
@@ -83,7 +83,7 @@ namespace Event_Infinity.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "EventId,EventTypeId,EventTitle,EventStartDate,EventEndDate,EventStartTime,EventEndTime,EventLocation,OrganizerName,OrganizerContactInfo,MaxTickets,AvailableTickets")] Event @event)
+        public ActionResult Edit([Bind(Include = "EventId,EventTypeId,EventTitle,EventDescription,EventStartDate,EventEndDate,EventLocation,OrganizerName,OrganizerContactInfo,MaxTickets,AvailableTickets")] Event @event)
         {
             if (ModelState.IsValid)
             {
