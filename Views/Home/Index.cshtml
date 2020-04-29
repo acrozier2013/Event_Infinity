@@ -20,7 +20,7 @@
             UpdateTargetId = "searchresults"
         }))
         {
-            <input type="text" name="eventTypeSearched"/>
+            <input type="text" name="eventTypeSearched" />
             <input type="text" name="locationSearched" />
             <input type="submit" value="search" />
             <img id="ajax-loader"
@@ -57,6 +57,8 @@
             <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
         </div>*@
 </div>
+
 @section Scripts{
-    <script src="~/Scripts/Apps/EventScripts.js"></script>   
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+    <script src="~/Scripts/Apps/EventScripts.js"></script>
 }

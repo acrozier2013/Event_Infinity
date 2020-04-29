@@ -33,7 +33,7 @@ namespace Event_Infinity.Controllers
         public ActionResult EventSearch(string eventTypeSearched, string locationSearched)
         {
             var events = GetEvents(eventTypeSearched, locationSearched);
-            return PartialView(events);
+            return PartialView("_EventSearch", events);
         }
 
         private List<Event> GetEvents(string eventTypeSearched, string locationSearched)
