@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Event_Infinity.Models.Event>
+
+<div id="searchresults">
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>@item.EventTitle</li>
+        }
+    </ul>
+</div>
