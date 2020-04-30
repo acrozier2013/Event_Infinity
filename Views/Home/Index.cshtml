@@ -20,8 +20,8 @@
             UpdateTargetId = "searchresults"
         }))
         {
-            <input type="text" name="eventTypeSearched" />
-            <input type="text" name="locationSearched" />
+            <input type="text" contextmenu="text" placeholder="Search for Event Titles" name="eventTypeSearched" style="width:20%"/>
+            <input type="text" placeholder="Search for Event Locations" name="locationSearched" style="width:20%"/>
             <input type="submit" value="search" />
             <img id="ajax-loader"
                  src="@Url.Content("~/Content/Images/ajax-loader.gif")"
