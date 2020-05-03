@@ -1,0 +1,38 @@
+﻿@model Event_Infinity.Models.OrderCartViewModel
+@{
+    ViewBag.Title = "Event Cart";
+}
+
+@section Scripts{
+    <script src="~/Scripts/Apps/EventScripts.js"></script>
+}
+
+
+<h2>Here is your event cart</h2>
+<br />
+<div id="update-message"></div>
+<div>
+    <table width="100%">
+        <tr>
+            <th>Title</th>
+            <th>Date Ordered</th>
+            <th>Number of Tickets</th>
+            <th>Order Status</th>
+        </tr>
+
+        @foreach (var item in Model.OrderItems)
+        {
+            <tr id="record-@item.RecordId">
+                <td>@item.EventSelected.EventTitle</td>
+                <td>@item.DateCreated</td>
+                <td id="item-count-@item.RecordId">@item.CountofTickets</td>
+                <td><a href="#" data-id="@item.RecordId" class="RemoveLink">Remove</a></td>
+            </tr>
+        }
+    </table>
+    <p class="button">
+        @Html.ActionLink("Back to Browse", "Index", "Home")
+    </p>
+</div>
+
+

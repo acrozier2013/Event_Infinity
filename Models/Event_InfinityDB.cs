@@ -22,5 +22,7 @@ namespace Event_Infinity.Models
         public System.Data.Entity.DbSet<Event_Infinity.Models.Event> Events { get; set; }
 
         public System.Data.Entity.DbSet<Event_Infinity.Models.EventType> EventTypes { get; set; }
+        public System.Data.Entity.DbSet<Event_Infinity.Models.Order> Carts { get; set; }
+
     }
 }
