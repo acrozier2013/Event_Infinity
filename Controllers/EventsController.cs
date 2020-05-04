@@ -38,6 +38,7 @@ namespace Event_Infinity.Controllers
         }
 
         // GET: Events/Create
+        [Authorize]
         public ActionResult Create()
         {
             ViewBag.EventTypeId = new SelectList(db.EventTypes, "EventTypeId", "Description");

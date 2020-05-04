@@ -50,22 +50,6 @@
             @Html.DisplayFor(model => model.EventEndDate)
         </dd>
 
-        @*<dt>
-            @Html.DisplayNameFor(model => model.EventStartTime)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.EventStartTime)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.EventEndTime)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.EventEndTime)
-        </dd>*@
-
         <dt>
             @Html.DisplayNameFor(model => model.EventLocation)
         </dt>
@@ -116,3 +100,6 @@
     @Html.ActionLink("Register", "AddToCart", "Order", new { id = Model.EventId }, null)
 </button>
 
+<button>
+@Html.ActionLink("Back to Browse", "Index", "Home")
+    </button>

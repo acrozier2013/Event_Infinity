@@ -1,6 +1,21 @@
 ﻿@model IEnumerable<Event_Infinity.Models.Event>
 
-<table id="searchresults" style="width:100%">
+
+@*<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Some Last Minute Deals</h3>
+    </div>
+    <div id="event-details">
+        <p>
+            <em>Event</em>
+        </p>
+    </div>
+
+</div>*@
+    <h3 class="panel-title"><b>Here are some last minute 
+        !!</b></h3>
+<table id="event-details" style="width:100%">
+
     <tr>
         <p></p>
         <th>Title</th>
@@ -23,10 +38,6 @@
     }
 </table>
 
-@if (Model.Count() == 0)
-{
-    <div>
-        <p>Hmm... looks like there are no results for your search.</p>
-    </div>
-
+@section Scripts{
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
 }

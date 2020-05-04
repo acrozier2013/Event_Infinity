@@ -31,6 +31,21 @@
     </div>
 </div>
 
+<div id="lastminutedeals">
+    @Ajax.ActionLink("Last Minute Deals!",
+    "LastMinuteDeals",
+    null,
+
+    new AjaxOptions
+    {
+        UpdateTargetId = "lastminutedeals",
+        InsertionMode = InsertionMode.Replace,
+        HttpMethod = "GET"
+    },
+    new { @class = "btn button" })
+    <div id="lastminutedeals"></div>
+</div>
+
 
 
 <div class="container body-content">

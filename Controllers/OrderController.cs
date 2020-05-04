@@ -12,6 +12,7 @@ namespace Event_Infinity.Controllers
     {
         private Models.Event_InfinityDB db = new Models.Event_InfinityDB();
         // GET: Order
+        [Authorize]
         public ActionResult Index()
         {
             OrderCart cart = OrderCart.GetCart(this.HttpContext);

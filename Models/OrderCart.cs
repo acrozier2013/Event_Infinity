@@ -47,6 +47,7 @@ namespace Event_Infinity.Models
         public void AddToCart(int eventId)
         {
             Order orderItem = db.Carts.SingleOrDefault(c => c.CartId == this.OrderCartId && c.EventId == eventId);
+            Event eventOnOrder = db.Events.SingleOrDefault(c => c.EventId == eventId);
 
             if(orderItem == null)
             {
@@ -65,17 +66,13 @@ namespace Event_Infinity.Models
                 //Item is already in cart: increase item count
                 orderItem.CountofTickets++;
             }
+            eventOnOrder.AvailableTickets--;
             db.SaveChanges();
         }
 
         public int RemoveFromCart(int recordId)
         {
             Order orderItem = db.Carts.SingleOrDefault(c => c.CartId == this.OrderCartId && c.RecordId == recordId);
-
-            //if (orderItem == null)
-            //{
-            //    throw new NullReferenceException();
-            //}
 
             int newCount;
 
